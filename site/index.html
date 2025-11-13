@@ -9,23 +9,24 @@
 <body>
   <header>
     <h1>DevMik Lab Wiki</h1>
-    <div class="controls">
-      <input type="text" id="search" placeholder="Search notes...">
-      <select id="categoryFilter">
-        <option value="all">All Categories</option>
-      </select>
-    </div>
   </header>
 
-  <main id="notes-container">
-    <!-- Notes will be dynamically injected here -->
-  </main>
+  <h2>Add a New Note</h2>
+  <form id="noteForm">
+    <input type="text" id="title" placeholder="Title" required />
+    <br>
+    <textarea id="content" placeholder="Content" required></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2>Notes</h2>
+  <div id="notesContainer"></div>
 
   <footer>
     <p>&copy; 2025 My Wiki 🌙</p>
   </footer>
 
   <script src="js/notes.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>

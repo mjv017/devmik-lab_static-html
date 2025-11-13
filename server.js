@@ -27,9 +27,6 @@ db.serialize(() => {
 // Use Express middleware to parse JSON requests.
 app.use(express.json());
 
-// Serve static content from the 'site' folder.
-app.use(express.static(path.join(__dirname, 'site')));
-
 // Define Get endpoint at /api/notes.
 // db.all() fetches all rows from notes.
 app.get('/api/notes', (req, res) => {
@@ -49,6 +46,18 @@ app.post('/api/notes', (req, res) => {
     res.json({ id: this.lastID, title, content });
   });
 });
+
+// Delete Note by ID
+app.delete("/api/notes/:id", (req, res) => {
+    const { id } = req.params;
+    db.run("DELETE FROM notes WHERE id = ?", [id], function (err) {
+        if (err) return res.status(500).json(err);
+        res.json({ deleteId: id });
+    });
+});
+
+// Serve static content from the 'site' folder.
+app.use(express.static(path.join(__dirname, 'site')));
 
 // Start server. Print message to verify running.
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
