@@ -1,69 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wiki</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>DevMik Lab Wiki</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search notes...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+      </select>
+    </div>
+  </header>
 
-<html>
+  <main id="notes-container">
+    <!-- Notes will be dynamically injected here -->
+  </main>
 
-<!-- head tag contains metadata -->
-  <head>
-    <!-- title tag is displayed in title bar of tab -->
-    <title>static-html</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <footer>
+    <p>&copy; 2025 My Wiki 🌙</p>
+  </footer>
 
-  <!-- body tag is container for all visible content -->
-  <body>
-    <!-- h tags are headings, there are 6 levels -->
-    <h1>W3Schools Practice</h1>
-    <!-- br tag is a newline -->
-    <br>
-    <!-- p tag is paragraph -->
-    <p style="color: blue;
-              background-color: powderblue;
-              text-align: center;
-              border: 2px solid black;">
-      crazy     cuz    extra  white space
-      and   new lines   are      ignored.
-    </p>
-
-    <p title="hi i'm a tooltip">p with tooltip</p>
-
-    <pre>
-      pre tag will preserve
-      line breaks and
-      w h i t e    spaces.
-    </pre>
-
-    <h1>head1</h1>
-    <hr>
-    <h2>head2 after hr</h2>
-
-    <a href="http://localhost:8080">an 'a href' link</a>
-    <br>
-    <img src="img/2b.jpg" alt="for screen readers" width="75" height="150">
-
-    <p>
-      <b>bold</b>             <br>
-      <strong>strong</strong> <br>
-      <!-- strong is like bold but for screen readers -->
-      <i>italic</i>           <br>
-      <em>emphasized</em>     <br>
-      <!-- emphasized is like italic but for screen readers -->
-      <mark>marked (highlighted)</mark>     <br>
-      <small>small</small>    <br>
-      <sub>subscript</sub>    <br>
-      <sup>superscript</sup>  <br>
-      <del>deleted (strikethrough)</del>      <br>
-      <ins>inserted (underlined)</ins> 
-    </p>
-
-    <p>
-      <q>A Quote</q>     <br>
-      <abbr title="World Wide Web">WWW</abbr>   <br>
-    </p>
-
-    <bdo dir="rtl">
-      This text will be displayed from right to left.
-    </bdo>
-
-  </body>
-
+  <script src="js/notes.js"></script>
+  <script src="js/script.js"></script>
+</body>
 </html>

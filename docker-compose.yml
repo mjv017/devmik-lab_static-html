@@ -1,0 +1,8 @@
+services:
+  wiki:
+    build: .
+    ports:
+      - "8080:5000"
+    volumes:
+      - ./wiki.db:/usr/src/app/wiki.db
+      - ./site:/usr/src/app/site
