@@ -4,6 +4,9 @@ FROM node:20
 # Specify working directory
 WORKDIR /usr/src/app
 
+# Install sqlite3
+RUN apt-get update && apt-get install -y sqlite3
+
 # Get node package manager going
 COPY package*.json ./
 RUN npm install
